@@ -1,0 +1,22 @@
+<view class='top'>
+  <view>
+    <view data-serial='0' class='{{tab==0?"on":""}}' bindtap='changeTab'>1</view>
+    <view data-serial='1' class='{{tab==1?"on":""}}' bindtap='changeTab'>2</view>
+    <view data-serial='2' class='{{tab==2?"on":""}}' bindtap='changeTab'>3</view>
+    <view data-serial='3' class='{{tab==3?"on":""}}' bindtap='changeTab'>4</view>
+    <view data-serial='4' class='{{tab==4?"on":""}}' bindtap='changeTab'>5</view>
+  </view>
+</view>
+<!--滑动-->
+<swiper class='area' current="{{swiperIndex}}" bindchange='swiperChange' >
+  <swiper-item wx:for="{{content}}" wx:for-item="x" wx:key="index" >
+    <scroll-view data-serial='0' class="list" scroll-y="true" >
+      <view class='content'>
+        内容 {{index + 1}}
+      </view>      
+    </scroll-view>
+  </swiper-item>
+</swiper>
+
+
+
